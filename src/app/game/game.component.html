@@ -1,0 +1,27 @@
+<div class="btn-bottom">
+    <button id="btn-add" class="btn-add" (click)="openDialog()">add player</button>
+    <button class="btn-restart" (click)="restart()">restart</button>
+</div>
+
+
+<app-player [name]="player" [playerActive]="i == game.currentPlayer" *ngFor="let player of game.players; let i = index;" 
+[ngStyle]="{'top.px': 120 + (i * 50)}" class="player-position" (click)="deletePlayer(i)"></app-player>
+
+<div *ngIf="!gameOver" class="container">
+    <div class="card-stack">      
+
+        <!-- Card stack -->
+        <img [ngStyle]="{'right.px': i * 10}" *ngFor="let c of [0,1,2,3]; let i = index;" src="/assets/img/cards/card-back.png">
+        <img (click)="takeCard()" class="top-card" style="right: 50px;" src="/assets/img/cards/card-back.png">
+
+        <!-- Stack for played cards -->
+        <img *ngFor="let card of game.playedCard" class="played-card" src="/assets/img/cards/{{ card }}.png" >
+
+        <!-- Current card Animation -->
+        <img (click)="takeCard()" *ngIf="game.pickCardAnimation" class="pick-card" src="/assets/img/cards/{{ game.currentCard }}.png">
+        
+    </div>
+</div>
+
+<app-action [card]="game.currentCard" [gameId]="gameId" class="pin-bottom"></app-action>
+

@@ -1,0 +1,10 @@
+<mat-card>
+    <mat-card-title> {{ card ? title : 'Game instructions:' }} </mat-card-title>
+    <mat-card-content> {{ card ? action : 'To start the game, first click on "add players".
+        Then each player clicks on card stack to select a card and follows the action.
+        The "link" to share with game participants you find below.'}}
+    </mat-card-content>
+    <mat-card-content>
+        <span>https://andrea-boehme.developerakademie.net/ring-of-fire/game/{{ gameId }}</span>
+    </mat-card-content>
+</mat-card>

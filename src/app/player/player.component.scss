@@ -1,0 +1,38 @@
+.player {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-width: 200px;
+    max-width: 500px;
+    background-color: rgb(233, 221, 152);
+    border-top-right-radius: 70px;
+    border-bottom-right-radius: 70px;
+    padding: 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    @media (max-width: 700px) {
+        min-width: unset;
+    }
+
+    span {
+        font-size: 24px;
+        margin-left: 16px;
+
+        @media (max-width: 600px) {
+            font-size: 16px;
+            margin-left: 0px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+    img {
+        height: 30px;
+        width: 30px;
+        border-radius: 100%;
+    }
+}
+
+.player-active {
+    background-color: orange !important;
+}

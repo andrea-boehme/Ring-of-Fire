@@ -1,0 +1,26 @@
+html,
+body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.d-none {
+    display: none;
+}
+
+@media (min-width: 720px) {
+    .hide-desktop {
+        display: none;
+    }
+}
+
+@media (max-width: 720px) {
+    .hide-mobile {
+        display: none;
+    }
+}
+
+@import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
