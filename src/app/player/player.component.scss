@@ -2,28 +2,37 @@
     display: flex;
     align-items: center;
     width: 100%;
-    min-width: 200px;
-    max-width: 500px;
     background-color: rgb(233, 221, 152);
     border-top-right-radius: 70px;
     border-bottom-right-radius: 70px;
-    padding: 8px;
-    overflow: hidden;
-    text-overflow: ellipsis;
 
     @media (max-width: 700px) {
         min-width: unset;
     }
 
     span {
+        display: block;
+        width: 250px;
         font-size: 24px;
         margin-left: 16px;
+        padding: 8px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        &:hover {
+            overflow: visible;
+        }
 
         @media (max-width: 600px) {
             font-size: 16px;
             margin-left: 0px;
-            overflow: hidden;
-            text-overflow: ellipsis;
+            width: 150px;
+        }
+
+        @media (max-width: 400px) {
+            font-size: 14px;
+            width: 100px;
         }
     }
     img {

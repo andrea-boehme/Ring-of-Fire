@@ -2,8 +2,8 @@
 
 <div mat-dialog-content>
   <mat-form-field>
-    <mat-label>Name</mat-label>
-    <input matInput [(ngModel)]="name">
+    <mat-label>Name (max. 20 characters)</mat-label>
+    <input maxlength="20" matInput [(ngModel)]="name">
   </mat-form-field>
 </div>
 

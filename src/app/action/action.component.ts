@@ -16,7 +16,7 @@ export class ActionComponent implements OnInit {
     { title: 'You', action: 'You decide who drinks' },
     { title: 'Me', action: 'Congrats! Drink a shot!' },
     { title: 'Floor', action: 'Everyone has to touch the floor in “not it” or “shot not” fashion. The last person to touch the floor has to drink.' },
-    { title: 'Rhyme', action: 'Say a word. The person that comes after you in the card drawing lineup then has to say a word that rhymes with your word. (We recommend “orange.”) Continue rhyming around the circle until someone either says a word that does not rhyme, says a nonsense word or cannot think of anything to say. That person has to drink. ' },
+    { title: 'Rhyme', action: 'Say a word. The next player has to say a word that rhymes with it. Continue until someone either says a word that does not rhyme, says a nonsense or cannot think of anything to say. That person has to drink.' },
     { title: 'Chicks', action: 'All girls drink.' },
     { title: 'Heaven', action: 'Put your hands up! The last player drinks!' },
     { title: 'Mate', action: 'Pick a mate. Your mate must always drink when you drink and the other way around.' },
